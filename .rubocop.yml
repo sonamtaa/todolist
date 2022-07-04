@@ -1,0 +1,67 @@
+require: rubocop-rspec
+
+AllCops:
+  Exclude:
+    - '**/*.json.jbuilder'
+    - '.git/**/*'
+    - 'bin/**/*'
+    - 'coverage/**/*'
+    - 'log/**/*'
+    - 'tmp/**/*'
+    - 'public/**/*'
+    - 'vendor/**/*'
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 3.1.0
+  NewCops: enable
+  SuggestExtensions: false
+RSpec/MultipleMemoizedHelpers:
+  Max: 20
+  Enabled: true
+RSpec/MultipleExpectations:
+  Enabled: false
+Metrics/AbcSize:
+  Max: 20
+  Enabled: true
+Metrics/ClassLength:
+  Max: 100
+  Enabled: true
+Metrics/MethodLength:
+  Max: 15
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context', 'class_methods', 'let!', 'it', 'namespace']
+  Enabled: true
+RSpec/AnyInstance:
+  Enabled: false
+RSpec/SubjectStub:
+  Enabled: false
+RSpec/NamedSubject:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/Alias:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Style/HashEachMethods:
+  Enabled: false
+Style/HashTransformKeys:
+  Enabled: false
+Style/HashTransformValues:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Lint/AssignmentInCondition:
+  Enabled: false
+RSpec/DescribeClass:
+  Enabled: false
+RSpec/ExampleLength:
+  Enabled: true
+  Max: 20
+RSpec/LetSetup:
+  Enabled: false
