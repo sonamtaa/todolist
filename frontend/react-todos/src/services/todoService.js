@@ -1,18 +1,18 @@
-const baseUrl = '${process.env.REACT_APP_API_URL}';
+const baseUrl = 'http://localhost:3001/todos'; // Todo: fix this routing issues ASAP
 
 export const loadTodos = () => {
     return fetch(baseUrl).then((response) => response.json());
 }
 
 export const getTodo = (id) => {
-    return fetch('${baseUrl}/${id}').then((response) => response.json());
+    return fetch('http://localhost:3001/todos/${id}').then((response) => response.json());
 }
 
 export const createTodo = (todo) => {
-    return fetch(baseUrl, {
+    return fetch("http://localhost:3001/todos", {
         method: 'POST',
         headers: {
-            contentType: 'application/json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             title: todo.title,
@@ -22,10 +22,10 @@ export const createTodo = (todo) => {
 }
 
 export const updateTodo = (todo) => {
-    return fetch('${baseUrl}/${todo.id}', {
+    return fetch('http://localhost:3001/todos/${todo.id}', {
         method: 'PUT',
         headers: {
-            contentType: 'application/json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             id: todo.id,
@@ -35,8 +35,8 @@ export const updateTodo = (todo) => {
     }).then((response) => response.json());
 }
 
-export const deleteTodo = (id) => {
-    return fetch('${baseUrl}/${id}', {
-        method: "DELETE"
-    }).then(response => response.json());
+export const deleteTodo = (todo) => {
+    return fetch("http://localhost:3001/todos/${todo.id}", {
+        method: 'DELETE'
+    }).then((response) => response.json());
 }
