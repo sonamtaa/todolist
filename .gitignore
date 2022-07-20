@@ -6,7 +6,8 @@
 
 # Ignore bundler config.
 /.bundle
-
+/frontend/react-todos/.env
+/frontend/react-todos/node_modules
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
