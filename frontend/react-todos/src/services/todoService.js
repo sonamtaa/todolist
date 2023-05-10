@@ -14,10 +14,10 @@ export const createTodo = (todo) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
+        body: JSON.stringify({ todo: {
             title: todo.title,
             completed: todo.completed
-        })
+        }})
     }).then((response) => response.json());
 }
 
@@ -27,11 +27,11 @@ export const updateTodo = (todo) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
+        body: JSON.stringify({ todo: {
             id: todo.id,
             title: todo.title,
             completed: todo.completed
-        })
+        }})
     }).then((response) => response.json());
 }
 
