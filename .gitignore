@@ -13,12 +13,12 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+.idea/**/*
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
 !/tmp/pids/.keep
-
+.env
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep

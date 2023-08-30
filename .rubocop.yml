@@ -9,10 +9,11 @@ AllCops:
     - 'log/**/*'
     - 'tmp/**/*'
     - 'public/**/*'
+    - 'frontend/**/*'
     - 'vendor/**/*'
   DisplayCopNames: true
   DisplayStyleGuide: true
-  TargetRubyVersion: 3.1.0
+  TargetRubyVersion: 3.2.2
   NewCops: enable
   SuggestExtensions: false
 RSpec/MultipleMemoizedHelpers:
@@ -29,7 +30,7 @@ Metrics/ClassLength:
 Metrics/MethodLength:
   Max: 15
 Metrics/BlockLength:
-  IgnoredMethods: ['describe', 'context', 'class_methods', 'let!', 'it', 'namespace']
+  AllowedMethods: ['describe', 'context', 'class_methods', 'let!', 'it', 'namespace']
   Enabled: true
 RSpec/AnyInstance:
   Enabled: false
@@ -37,7 +38,8 @@ RSpec/SubjectStub:
   Enabled: false
 RSpec/NamedSubject:
   Enabled: false
-
+RSpec/FilePath:
+  Enabled: false
 Style/NumericLiterals:
   Enabled: false
 Style/Documentation:
