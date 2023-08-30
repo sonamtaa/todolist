@@ -5,7 +5,7 @@ export const loadTodos = () => {
 }
 
 export const getTodo = (id) => {
-    return fetch('http://localhost:3001/todos/${id}').then((response) => response.json());
+    return fetch(`http://localhost:3001/todos/${id}`).then((response) => response.json());
 }
 
 export const createTodo = (todo) => {
@@ -22,13 +22,12 @@ export const createTodo = (todo) => {
 }
 
 export const updateTodo = (todo) => {
-    return fetch('http://localhost:3001/todos/${todo.id}', {
+    return fetch(`http://localhost:3001/todos/${todo.id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            id: todo.id,
             title: todo.title,
             completed: todo.completed
         })
